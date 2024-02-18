@@ -3,6 +3,9 @@
 Ferramenta criada para gerar imagens aleatórias.
 
 ![Screenshot](./preview/Screenshot.png)
+---
+![demo](https://github.com/Odisseu93/image-generator/assets/76600539/7af61c34-23b1-4490-a71c-01f1166aecf6)
+
 
 ## Tecnologias
 
