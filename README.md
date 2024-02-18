@@ -1,27 +1,67 @@
-# ImageGenerator
+# Gerador de Imagens
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+Ferramenta criada para gerar imagens aleatórias.
 
-## Development server
+![Screenshot](./preview/Screenshot.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Tecnologias
 
-## Code scaffolding
+- [Angular 17.0.0](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Less](https://lesscss.org/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## <a id="image-generator-api"></a> Acesso API para gerar a descrição
 
-## Build
+[Doc](https://github.com/Odisseu93/openai-api)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Rodar localmente
 
-## Running unit tests
+0. Clone o repositório da API, e execute-o localmente (_siga o passo-a-passo do tópico anterior ["Acesso API para gerar as Imagens"](#image-generator-api)_)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone este repositório em seu ambiente local:
 
-## Running end-to-end tests
+```bash
+git clone https://image-generator.git
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+2. Navegue até o diretório do projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+cd image-generator
+```
+
+---
+
+3. Instale as dependências
+
+```bash
+npm start
+```
+
+---
+
+4. Rode o servidor localmente
+
+```bash
+npm dev
+```
+
+5. Seja feliz :-)
+
+## Lincença
+
+[MIT](LICENSE.md)
+
+## Desenvolvedor/Autor
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/76600539/235897309-88ab21df-d0be-4905-829c-36ab68ebc2e8.png" alt="developer: Ulisses Silvério"    width="200px" align="center"/>
+</div>
+<br>
+<div align="center" margin="50px">
+ <a href="https://ulisses.tec.br" align="center">
+  <b>Ulisses Silvério</b>
+</a>
+</div>
