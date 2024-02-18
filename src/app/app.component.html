@@ -1,1 +1,32 @@
-<h1>Gerador de Images</h1>
+<h1 class="honk-title">Gerador de Images</h1>
+<main class="main-content">
+  <form [formGroup]="form" class="form" (ngSubmit)="handleSubmit()">
+    <fieldset class="form-group">
+      <label for="imageDescription">Descreva a imagem</label>
+      <textarea formControlName="imageDescription" (input)="countChar()" maxlength="140"
+        placeholder="Digite uma descrição de até 140 caracteres da imagem que você quer gerar..."></textarea>
+      <small>{{totalChar}} / 140</small>
+    </fieldset>
+    <button type="submit">Enviar</button>
+  </form>
+  <picture class="image-container">
+    <ng-container *ngIf="isLoading; else image">
+      <div class="loading">
+        <mat-spinner role="progressbar" class="spinner"></mat-spinner>
+      </div>
+    </ng-container>
+
+    <ng-template #image>
+      <ng-container *ngIf="generatedImageSrc && !isLoading; else placeholder">
+        <img [src]="generatedImageSrc" alt="generated image">
+      </ng-container>
+
+      <ng-template #placeholder>
+        <img src="/assets/images/image-placeholder.svg" title="Sem image" alt="placeholder image">
+      </ng-template>
+    </ng-template>
+  </picture>
+</main>
+<footer class="footer">
+  <p>Desenvolvido por <a href="http://ulisses.tec.br">Ulisses Silvério</a></p>
+</footer>

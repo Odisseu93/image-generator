@@ -1,1 +1,158 @@
+@import "./shared/styles/index.less";
 
+.honk-title {
+  font-family: "Honk", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3.5rem;
+  text-align: center;
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+}
+
+.main-content {
+  background-color: #121212;
+  color: @text-color;
+
+  .d-flex(@jc: center);
+  align-items: center;
+  padding: 24px 1rem;
+  flex-wrap: wrap;
+
+  min-height: 80vh;
+
+  margin: 24px auto 0 auto;
+
+  .form {
+    color: @background-color;
+
+    .d-flex(@d: column, @jc: center);
+    flex-wrap: nowrap;
+    align-self: baseline;
+    align-items: center;
+
+    padding: 24px 1rem;
+
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    min-width: max-content;
+
+    .rounded();
+    box-sizing: border-box;
+
+    font-size: 1.25rem;
+
+    & .form-group {
+      .d-flex(@d: column, @jc: center);
+      flex-wrap: nowrap;
+      align-items: center;
+
+      width: max-content;
+      width: 90%;
+      max-width: 600px;
+      min-height: 100px;
+
+      margin-bottom: 8px;
+
+      & label {
+        width: 100%;
+
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: left;
+      }
+
+      & textarea {
+        min-width: 300px;
+        max-width: 600px;
+        min-height: 220px;
+        height: auto;
+
+        padding: 24px 1rem;
+        .rounded();
+
+        font-size: 1.25rem;
+
+        box-sizing: border-box;
+        resize: none;
+      }
+
+      small {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    button {
+      width: -moz-fit-content;
+      width: fit-content;
+
+      padding: 8px 24px;
+      border: none;
+      outline: 1px solid @text-color;
+      .rounded();
+
+      font-size: 1rem;
+
+      &:hover {
+        background: @background-gradient;
+      }
+
+      &:active {
+        color: #ffffff;
+        outline: 1px solid @highlight-color;
+      }
+    }
+  }
+
+  picture {
+    height: 80%;
+    width: clamp(320px, 100%, 600px);
+
+    & img {
+      width: 100%;
+      height: 100%;
+
+      margin: 0 auto;
+      .rounded();
+
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 963px) {
+    align-items: normal;
+  }
+}
+
+.loading {
+  .spinner {
+    --mdc-circular-progress-active-indicator-color: @neutral-gray-color;
+    width: 4rem !important;
+    margin-inline: auto;
+  }
+}
+
+.footer {
+  background-color: #121212;
+  color: @text-color;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #ffffff;
+  outline: 1px solid #ffffff;
+  line-height: 1.5rem;
+  a {
+    background: @background-gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: @highlight-color;
+    }
+  }
+}
